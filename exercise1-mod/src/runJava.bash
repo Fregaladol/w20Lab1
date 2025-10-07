@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
 
-# compilar codigo
-javac App.java
+# Verificar si el archivo ya está compilado
+if [ -f "App.class" ]; then
+    echo "***************************************"
+    echo "Tu fichero ya se encontraba compilado."
+    echo "***************************************"
+else
+    echo "Compilando App.java..."
+    javac App.java
+fi
 
-
-# ejecutar y pasar argumentos
+# Ejecutar y pasar argumentos
 java App "EjEcutAR pRogrAmA" 1 
 java App "EjEcutAR pRogrAmA" 2
 java App "EjEcutAR pRogrAmA" 3
-java App "EjEcutAR pRogrAmA" 
+java App "EjEcutAR pRogrAmA"

@@ -9,9 +9,9 @@ else
     echo "Compilando App.java..."
     javac App.java
 fi
-
-# Ejecutar y pasar argumentos
-java App "EjEcutAR pRogrAmA" 1 
-java App "EjEcutAR pRogrAmA" 2
-java App "EjEcutAR pRogrAmA" 3
-java App "EjEcutAR pRogrAmA"
+# Ejecutar con distintos conjuntos de argumentos
+java -ea App España 17
+java -ea App México 18
+java -ea App españa 18
+java -ea App España
+java -ea App 18 España
