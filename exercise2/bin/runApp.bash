@@ -1,8 +1,14 @@
- #!/usr/bin/env bash
+#!/usr/bin/env bash
 
-# Compilar (solo una vez si no cambia el código)
-javac App.java
-
+# Verificar si el archivo ya está compilado
+if [ -f "App.class" ]; then
+    echo "***************************************"
+    echo "Tu fichero ya se encontraba compilado."
+    echo "***************************************"
+else
+    echo "Compilando App.java..."
+    javac App.java
+fi
 # Ejecutar con distintos conjuntos de argumentos
 java -ea App España 17
 java -ea App México 18
